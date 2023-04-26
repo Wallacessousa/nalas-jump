@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+body{
+    background-color: rgb(124, 198, 28);
+}
+.logo{
+    margin-top: 5%;
+    margin-left: -400px;
+    text-align: center;
+    animation: openlogo 4s ease-in-out;
+}
+
+.logo img{
+    width: 400px;
+    position: absolute;
+    z-index: 98;
+
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom:  3px solid green;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.frasetop{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+}
+
+.timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1px;
+    font-size: 18px;
+    margin-bottom: -15px;
+    overflow: hidden;
+    padding: 10px;
+    background: #e0f6ff;
+    
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1px;
+    max-width: 80px;
+    min-width: 40px;
+    overflow: hidden;
+}
+
+#miliseconds{
+    min-width: 55px;
+    max-width: 55px;
+    justify-content: end;
+}
+
+.separator{
+    padding: 0 px;
+}
+
+#startBtn{
+    font-size: 12px;
+}
+
+.btn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.press{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; 
+    border: 3px solid black;
+    background: #ffff4a;
+    width: 400px;
+    box-shadow: rgb(255, 255, 255) 5px 5px 0px;
+    z-index: 100;
+}
+
+.press button{
+    padding: 10px 50px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: rgb(255, 255, 255) 5px 5px 0px;
+
+}
+.fadein { animation: fadeIn 5s; }
+
+.pipe{
+    position: absolute;
+    bottom: -10px;
+    width: 65px; /* antes era 80px */
+    animation: pipe-animation 1.2s infinite linear;
+    animation-delay: 3s;
+}
+
+.mario{
+    width: 270px;
+    position: absolute;
+    bottom: -15px;
+    transform: rotateY(180deg);
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 450px;
+    margin: 10px;
+    animation: clouds-animation 10s infinite linear;    
+}
+
+.bgclouds{
+    position: absolute;
+    width: 100%;
+    bottom: -100px;    
+    animation: fadein-bgclouds 8s ease-in-out, bgclouds-animation 60s infinite linear;
+}
+
+
+@keyframes pipe-animation {
+    from {
+        right: -150px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    61% { opacity: 0; }
+    62% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+
+@keyframes openlogo {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+
+@keyframes jump {
+    0% {bottom: 0;}
+    40% {bottom: 180px;}
+    50% {bottom: 180px;}
+    60% {bottom: 180px;}
+    100% {bottom: 0;}
+
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -570px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes bgclouds-animation {
+    from {
+        right:0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes fadein-bgclouds {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/*
+@keyframes goomba-animation {
+    from {
+        right: 0;
+    }
+
+    to{
+        right: 100%;
+    }
+} /*

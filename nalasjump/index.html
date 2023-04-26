@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); </style>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon" />
+    <title>Nala's Jump</title>
+
+</head>
+<body>
+    
+    <div class="game-board">
+        
+
+        <div class="timer" onload="startTimer()" >
+            <!--<button class="btn" id="startBtn" >NALA</button>-->
+
+            <div>Tempo </div>
+            <div class="sepatator">:</div>
+            <div class="time" id="minutes">00</div>
+            <div class="sepatator">:</div>
+            <div class="time" id="seconds">00</div>
+            <div class="sepatator">:</div>
+            <div class="time" id="miliseconds">000</div>
+
+                <div class="press" id="press">
+                    <p>VOCÊ PERDEU!</p>
+                    <button id="refresh">CLICK AQUI PARA JOGAR NOVAMENTE</button>            
+                </div>
+        </div>
+
+        <div class="logo"> <img src="./images/nalasjump.png"> </div>
+
+
+        
+        <img src="./images/bgclouds.png" class="bgclouds">
+        <img src="./images/clouds.png" class="clouds">
+        <img src="./images/mario.gif" class="mario">
+        
+            <div class="fadein">
+                <img src="./images/pipe.png" class="pipe">
+            </div>
+
+    </div>
+    <div class="frasetop" ><p><strong>Instruções:</strong> Pressione qualquer tecla para saltar. </p></div>
+
+
+    
+</body>
+</html>
